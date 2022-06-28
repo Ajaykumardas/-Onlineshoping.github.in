@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: blanchedalmond;
+           
+        }
+        form{
+            background-color: aqua;
+            padding: 80px 180px;
+            font-size: 30px;
+           position: relative;
+           right: 30px;
+        }
+        input{
+            size: 50px;
+        }
+    </style>
+    <script>
+        function myfun()
+        {
+            var u=document.getElementById("un").value;
+            var p=document.getElementById("ps").value;
+            var unArray=["ajay","ramesh","ganesh"]
+            var psArray=["kumar","das","1234"]
+            if(u=="")
+            {
+                document.getElementById("user").innerHTML="please enter username"
+            }
+            else if(p=="")
+        {
+            document.getElementById("pass").innerHTML="please enetr password"
+        }
+        else if(u!=""&&p!="")
+        {
+            for(var i=0;i<=unArray.lenght;i++)
+            {
+                if(u==unArray[i]&&p==psArray[i])
+                {
+                    alert("login is succesfully");
+                    return true;
+                }
+                else
+                {
+                    alert("username is not registred");
+                    return false;
+                }
+            }
+
+        }
+        }
+    </script>
+</head>
+<body>
+    <h2>
+        the act of logging in to a database, mobile device, or computer, especially a multiuser computer or a remote or networked computer system.
+a username and password that allows a person to log in to a computer system, network, mobile device, or user account.
+    </h2>
+    <form>
+        username<input type="text"id="un"><span id="user"></span><br>
+        password<input type="password"id="ps"><span id="pass"></span><br>
+        <input type="button"value="login"onclick="return myfun()"><br>
+    </form>
+</body>
+</html>
